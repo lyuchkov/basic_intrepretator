@@ -9,6 +9,8 @@ public class Application {
         while (true){
             String line = scanner.nextLine();
             interpreter.parse(line);
+            System.out.println("Commit for commit");
         }
+
     }
 }
