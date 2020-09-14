@@ -15,7 +15,7 @@ public class Let extends Operator {
         String[] parts = code.split("=");
         try {
             Object val = Expression.eval(interpreter.getVars(), parts[1]);
-            interpreter.getVars().put(parts[0], Double.parseDouble(val.toString()));
+            interpreter.getVars().put(parts[0].trim(), Double.parseDouble(val.toString()));
 
         } catch (ScriptException e) {
             e.printStackTrace();

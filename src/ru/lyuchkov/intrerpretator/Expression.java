@@ -9,6 +9,7 @@ public class Expression {
     public static Object eval(Map<String, Double> vars, String code) throws ScriptException {
         ScriptEngineManager sem = new ScriptEngineManager();
         ScriptEngine engine = sem.getEngineByName("JavaScript");
+        code.replace("SQRT", "Math.sqrt");
         for(String str: vars.keySet()){
             code= code.replace(str, vars.get(str).toString());
         }

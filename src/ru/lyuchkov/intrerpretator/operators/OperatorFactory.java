@@ -10,6 +10,7 @@ public class OperatorFactory {
         ops.put("PRINT", Print.class);
         ops.put("LET", Let.class);
         ops.put("IF", If.class);
+        ops.put("GOTO", Goto.class);
     }
     public static Operator createOperator(String opName, String substring) {
         Class opCLass = ops.get(opName);
